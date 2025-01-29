@@ -1,0 +1,50 @@
+<Ui::Panel
+  @title={{concat "Edit " @patient.name}}
+  @onCancel={{this.onCancel}}
+  @onSave={{this.onSave}}
+>
+  <Form>
+    <Form::Fieldset>
+      <Form::Field @label="Name" @labelFor="name-field" @isFullWidth={{true}}>
+        <Form::Input
+          id="name-field"
+          name="name-field"
+          placeholder="Jane Smith"
+          @value={{@patient.name}}
+          @onUpdate={{fn (mut @patient.name)}}
+        />
+      </Form::Field>
+       <Form::Field @label="Email" @labelFor="email-field" @isFullWidth={{true}}>
+        <Form::Input
+          id="email-field"
+          name="email-field"
+          placeholder="jane.smith@apple.com"
+          @value={{@patient.email}}
+          @onUpdate={{fn (mut @patient.email)}}
+        />
+      </Form::Field>
+
+       <Form::Field @label="Occupation" @labelFor="occupation-field" @isFullWidth={{true}}>
+        <Form::Input
+          id="occupation-field"
+          name="occupation-field"
+          placeholder="Koala Keeper"
+          @value={{@patient.occupation}}
+          @onUpdate={{fn (mut @patient.occupation)}}
+        />
+      </Form::Field>
+
+      <Form::Field @label="Dentist" @labelFor="dentist-field">
+        <Form::Select
+          id="dentist-field"
+          name="dentist-field"
+          @options={{@practitioners}}
+          @selected={{@patient.practitioner}}
+          @labelPath="name"
+          @valuePath="id"
+          @onChange={{fn (mut @patient.practitioner)}}
+        />
+      </Form::Field>
+    </Form::Fieldset>
+  </Form>
+</Ui::Panel>

@@ -1,0 +1,19 @@
+<div class="min-h-full">
+
+  <Ui::Nav />
+
+  <div class="py-10">
+    {{#if @title}}
+      <header>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{@title}}</h1>
+        </div>
+      </header>
+    {{/if}}
+    <main>
+      <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        {{yield}}
+      </div>
+    </main>
+  </div>
+</div>

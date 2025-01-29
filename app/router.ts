@@ -7,5 +7,9 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  // Add route declarations here
+  this.route('patients', function () {
+    this.route('patient', { path: ':patient_id' }, function() {
+      this.route('edit');
+    });
+  });
 });
