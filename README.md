@@ -1,7 +1,13 @@
 # sparkle
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Sparkle is a small EmberJS app that is used for the pairing exercise in a frontend engineering interview.
+
+- Uses the latest version of EmberJS but sticks with Octane syntax and Glimmer components to keep it familiar and accesssible to our candidates.
+- Uses Mirage to mock out a backend
+- Uses Tailwind for styling
+- Provides a home route, a patients route, and an edit patient route.
+- Provides a patient model and a practitioner model.
+- Use `pnpm` as the package manager.
 
 ## Prerequisites
 
@@ -11,18 +17,19 @@ You will need the following things properly installed on your computer.
 - [Node.js](https://nodejs.org/) (with npm)
 - [Ember CLI](https://cli.emberjs.com/release/)
 - [Google Chrome](https://google.com/chrome/)
+- [pnpm](https://pnpm.io/)
 
 ## Installation
 
 - `git clone <repository-url>` this repository
 - `cd sparkle`
-- `npm install`
+- `pnpm install`
 
 ## Running / Development
 
-- `npm run start`
-- Visit your app at [http://localhost:4200](http://localhost:4200).
-- Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+- `pnpm run start`
+- Visit Sparkle at [http://localhost:4200](http://localhost:4200).
+- Visit the tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
 ### Code Generators
 
@@ -30,22 +37,22 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Running Tests
 
-- `npm run test`
-- `npm run test:ember -- --server`
+- `pnpm run test`
+- `pnpm run test:ember -- --server`
 
 ### Linting
 
-- `npm run lint`
-- `npm run lint:fix`
+- `pnpm run lint`
+- `pnpm run lint:fix`
 
 ### Building
 
-- `npm exec ember build` (development)
-- `npm run build` (production)
+- `pnpm exec ember build` (development)
+- `pnpm run build` (production)
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+This repo should not be deployed.
 
 ## Further Reading / Useful Links
 
