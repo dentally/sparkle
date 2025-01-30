@@ -13,19 +13,6 @@ interface EditPatientScreenArgs {
 export default class EditPatientScreen extends Component<EditPatientScreenArgs> {
   @service declare router: Router;
 
-  get practitionerOptions() {
-    return [
-      { label: 'Dr. John Doe', value: '1' },
-      { label: 'Dr. Jane Doe', value: '2' },
-    ];
-  }
-
-  get selectedPractitionerOption() {
-    return this.practitionerOptions.find((option) => {
-      return option.value === this.args.patient.practitioner.id;
-    });
-  }
-
   @action
   onUpdateName(event: Event) {
     const target = event.target as HTMLInputElement;
