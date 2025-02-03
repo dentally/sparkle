@@ -65,6 +65,7 @@
     "ember-cli-htmlbars": "^6.3.0",
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-mirage": "^3.0.4",
+    "ember-concurrency": "^4.0.2",
     "ember-data": "~5.3.9",
     "ember-fetch": "^8.1.2",
     "ember-load-initializers": "^2.1.2",
