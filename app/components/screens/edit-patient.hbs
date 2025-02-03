@@ -12,6 +12,7 @@
           placeholder="Jane Smith"
           @value={{@patient.name}}
           @onUpdate={{fn (mut @patient.name)}}
+          data-test-patient-name-input
         />
       </Form::Field>
        <Form::Field @label="Email" @labelFor="email-field" @isFullWidth={{true}}>
@@ -21,6 +22,7 @@
           placeholder="jane.smith@apple.com"
           @value={{@patient.email}}
           @onUpdate={{fn (mut @patient.email)}}
+          data-test-patient-email-input
         />
       </Form::Field>
 
@@ -31,6 +33,7 @@
           placeholder="Koala Keeper"
           @value={{@patient.occupation}}
           @onUpdate={{fn (mut @patient.occupation)}}
+          data-test-patient-occupation-input
         />
       </Form::Field>
 
@@ -43,6 +46,7 @@
           @labelPath="name"
           @valuePath="id"
           @onChange={{fn (mut @patient.practitioner)}}
+          data-test-patient-practitioner-input
         />
       </Form::Field>
     </Form::Fieldset>

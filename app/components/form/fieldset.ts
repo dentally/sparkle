@@ -1,8 +1,8 @@
-import Component from '@glimmer/component';
+import templateOnly from '@ember/component/template-only';
 
 interface FormFieldsetArgs {
   title?: string;
   description?: string;
 }
 
-export default class FormFieldset extends Component<FormFieldsetArgs> {}
+export default templateOnly<FormFieldsetArgs>();
