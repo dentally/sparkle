@@ -27,19 +27,20 @@ export default function (requestedRecords = {}) {
 
       serializer.alwaysIncludeLinkageData = originalAlwaysIncludeLinkageData;
 
-      store.pushPayload(json);
+      (store as any).pushPayload(json);
     });
 
   Object.keys(requestedRecords).forEach((key) => {
-    let recordOrRecords = requestedRecords[key];
+    const recordOrRecords =
+      requestedRecords[key as keyof typeof requestedRecords];
     if (Array.isArray(recordOrRecords)) {
-      returnedRecords[key] = recordOrRecords.map((record) =>
-        store.peekRecord(record.modelName, record.id),
-      );
+      (returnedRecords as Record<string, unknown>)[key] = (
+        recordOrRecords as Array<{ modelName: string; id: string }>
+      ).map((record) => store.peekRecord(record.modelName, record.id));
     } else {
-      returnedRecords[key] = store.peekRecord(
-        recordOrRecords.modelName,
-        recordOrRecords.id,
+      (returnedRecords as Record<string, unknown>)[key] = store.peekRecord(
+        (recordOrRecords as { modelName: string; id: string }).modelName,
+        (recordOrRecords as { modelName: string; id: string }).id,
       );
     }
   });
