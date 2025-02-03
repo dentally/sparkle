@@ -8,6 +8,7 @@
     "paths": {
       "sparkle/tests/*": ["tests/*"],
       "sparkle/*": ["app/*"],
+      "sparkle/mirage/*": ["mirage/*"],
       "*": ["types/*"]
     },
     "types": [

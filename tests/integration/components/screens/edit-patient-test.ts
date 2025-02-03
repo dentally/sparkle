@@ -8,9 +8,10 @@ import type Practitioner from 'sparkle/models/practitioner';
 import type Patient from 'sparkle/models/patient';
 //@ts-expect-error No types for sinon
 import sinon from 'sinon';
+import type { Server } from 'mirage';
 
 type Context = TestContext & {
-  server: any;
+  server: Server;
   patient: Patient;
   practitioners: Practitioner[];
 };
