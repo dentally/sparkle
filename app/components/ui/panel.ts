@@ -1,4 +1,4 @@
-import Component from '@glimmer/component';
+import templateOnly from '@ember/component/template-only';
 
 interface UiPanelArgs {
   title: string;
@@ -6,4 +6,4 @@ interface UiPanelArgs {
   onSave: () => void;
 }
 
-export default class UiPanel extends Component<UiPanelArgs> {}
+export default templateOnly<UiPanelArgs>();

@@ -1,8 +1,8 @@
-import Component from '@glimmer/component';
+import templateOnly from '@ember/component/template-only';
 import Patient from 'sparkle/models/patient';
 
 interface HomepageScreenArgs {
   patients: Patient[];
 }
 
-export default class HomepageScreen extends Component<HomepageScreenArgs> {}
+export default templateOnly<HomepageScreenArgs>();
